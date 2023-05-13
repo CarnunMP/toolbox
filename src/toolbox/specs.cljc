@@ -1,4 +1,4 @@
-(ns specs
+(ns toolbox.specs
   (:require #?(:clj  [clojure.spec.alpha :as s]
                :cljs [cljs.spec.alpha :as s])
             [clojure.string :as str]))
