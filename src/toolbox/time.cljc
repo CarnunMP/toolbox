@@ -1,14 +1,12 @@
 (ns toolbox.time
-  (:require #?(:clj  [clojure.spec.alpha :as s]
-               :cljs [cljs.spec.alpha :as s])
-            [clojure.string :as str]
+  (:require [clojure.string :as str]
             [tick.core :as t]
             ; ---
-            [toolbox.specs :as specs]))
+            [toolbox.strings :refer [non-blank-string?]]))
 
 
 (defn day-of-month->abbrev [day]
-  {:pre [(s/valid? ::specs/non-blank-string day)]}
+  {:pre [(non-blank-string? day)]}
   (case day
     "1" "1st"
     "2" "2nd"
