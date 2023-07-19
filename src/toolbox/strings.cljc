@@ -3,5 +3,5 @@
 
 
 (defn non-blank-string? [s]
-  {:pre [(string? s)]}
-  (not (str/blank? s)))
+  (and (string? s)
+       (not (str/blank? s))))
